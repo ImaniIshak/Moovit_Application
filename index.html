@@ -1,77 +1,100 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Phone Frame Template</title>
-    <!-- Tailwind CSS for Layout & Styling -->
+
+    <title>Moovit UI/UX Application</title>
+
+    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Font Awesome for Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!-- Custom External Stylesheet -->
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Custom CSS -->
     <link rel="stylesheet" href="css/style.css">
 </head>
 
-<body class="flex flex-col items-center justify-center min-h-screen p-0 sm:p-4">
+<body class="app-body flex flex-col items-center justify-center min-h-screen p-0 sm:p-4">
 
-    <!-- Desktop Title / Info Header -->
+    <!-- Desktop Title -->
     <div class="hidden sm:block text-center max-w-lg mb-4">
-        <h1 class="text-xl font-bold text-amber-400 mb-1">Moovit UI/UX Application</h1>
-        <p class="text-slate-400 text-xs"></p>
+        <h1 class="desktop-title text-xl font-bold mb-1">
+            MyRapid KL UI/UX Application
+        </h1>
+        <p class="desktop-subtitle text-xs"></p>
     </div>
 
-    <!-- MAIN PHONE FRAME SIMULATOR -->
-    <div class="phone-frame w-full h-screen sm:h-[840px] bg-slate-900 flex flex-col relative overflow-hidden text-slate-100">
+    <!-- Main Phone Frame -->
+    <div class="phone-frame w-full h-screen sm:h-[840px] flex flex-col relative overflow-hidden">
 
-        <!-- 1. PHONE STATUS BAR (TOP BAR) -->
-        <div class="w-full bg-slate-950 px-6 py-2 flex justify-between items-center text-xs text-slate-400 z-50 flex-shrink-0">
+        <!-- Phone Status Bar -->
+        <div class="status-bar w-full px-6 py-2 flex justify-between items-center text-xs flex-shrink-0">
             <span>9:41 AM</span>
-            <!-- Speaker Notch / Island -->
-            <div class="w-20 h-4 bg-slate-800 rounded-full mx-auto hidden sm:block"></div>
+
+            <div class="speaker-notch w-20 h-4 rounded-full mx-auto hidden sm:block"></div>
+
             <div class="flex gap-2 items-center">
                 <i class="fa-solid fa-wifi"></i>
                 <i class="fa-solid fa-battery-full"></i>
             </div>
         </div>
 
-        <!-- 2. APP HEADER BAR (FIXED TOP) -->
-        <div class="bg-amber-500 text-slate-900 px-4 py-3 flex items-center justify-between shadow-md z-40 flex-shrink-0">
-            <div class="flex items-center gap-3">
+        
+        <!-- MyRapid KL App Header -->
+        <div class="rapid-header px-4 py-3 flex items-center justify-between shadow-sm z-40 flex-shrink-0">
+
+            <div class="flex items-center gap-2.5">
                 <i class="fa-solid fa-bars text-lg cursor-pointer"></i>
-                <div class="font-bold text-lg tracking-wide flex items-center gap-1.5">
-                    <i class="fa-solid fa-bus-simple"></i> moovit
+
+                <div class="font-bold text-base tracking-wide flex items-center gap-2">
+                    <span class="rapid-logo px-1.5 py-0.5 rounded font-extrabold text-xs">
+                        PULSE
+                    </span>
+
+                    <span>MyRapid KL</span>
                 </div>
             </div>
-            <span class="bg-slate-900 text-amber-400 text-xs px-2.5 py-1 rounded-full font-bold">location</span>
-        </div>
 
-        <!-- 3. SCROLLABLE CONTENT CANVAS (YOUR CUSTOM UI GOES HERE) -->
-        <div class="flex-1 overflow-y-auto hide-scrollbar relative bg-slate-950 p-4 flex flex-col gap-4">
-            
-            <!-- PLACEHOLDER BOX (Replace this entire block with your app content) -->
-           
+            <span class="rapid-location text-[10px] px-2.5 py-1 rounded-full font-semibold border">
+                Klang Valley
+            </span>
 
         </div>
 
-        <!-- 4. APP NAVIGATION BAR (FIXED BOTTOM) -->
-        <div class="bg-slate-950 border-t border-slate-800 px-6 py-2.5 flex justify-around items-center text-slate-400 text-xs flex-shrink-0 z-40">
-            <div class="flex flex-col items-center text-amber-500 font-bold cursor-pointer">
+
+        <!-- Scrollable Content -->
+        <div class="content-area flex-1 overflow-y-auto hide-scrollbar relative p-4 flex flex-col gap-4">
+
+            <!-- Add your app content here -->
+
+        </div>
+
+        <!-- Bottom Navigation -->
+        <div class="bottom-nav border-t px-6 py-2.5 flex justify-around items-center text-xs flex-shrink-0 z-40">
+
+            <div class="nav-item nav-active flex flex-col items-center font-bold cursor-pointer">
                 <i class="fa-solid fa-location-arrow text-sm mb-0.5"></i>
                 <span class="text-[10px]">Directions</span>
             </div>
-            <div class="flex flex-col items-center hover:text-slate-200 cursor-pointer">
+
+            <div class="nav-item flex flex-col items-center cursor-pointer">
                 <i class="fa-solid fa-clock-rotate-left text-sm mb-0.5"></i>
                 <span class="text-[10px]">Schedules</span>
             </div>
-            <div class="flex flex-col items-center hover:text-slate-200 cursor-pointer">
+
+            <div class="nav-item flex flex-col items-center cursor-pointer">
                 <i class="fa-solid fa-triangle-exclamation text-sm mb-0.5"></i>
                 <span class="text-[10px]">Alerts</span>
             </div>
-        </div>
 
+        </div>
     </div>
 
-    <!-- Custom External Script -->
+    <!-- Custom JavaScript -->
     <script src="script.js"></script>
 </body>
 </html>

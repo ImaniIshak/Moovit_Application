@@ -1,25 +1,174 @@
-body {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-    background-color: #0f172a;
-    color: #f8fafc;
+
+/* =========================================
+   1. THEME COLOURS
+   Tukar warna di sini sahaja
+   ========================================= */
+
+
+:root {
+    /* Main colours */
+    --primary: #dc2626;
+    --primary-hover: #d97706;
+    --primary-text: #ffffff;
+
+    /* Background colours - LIGHT MODE */
+    --page-bg: #f1f5f9;
+    --phone-bg: #ffffff;
+    --header-bg: #dc2626;
+    --content-bg: #f8fafc;
+    --status-bg: #ffffff;
+    --bottom-nav-bg: #ffffff;
+    --notch-bg: #e2e8f0;
+
+    /* Text colours */
+    --text-main: #1e293b;
+    --text-muted: #64748b;
+    --text-on-primary: #1e293b;
+
+    /* Border and frame */
+    --border-color: #e2e8f0;
+    --frame-border: #1e293b;
+
+    /* Phone shadow */
+    --phone-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.15);
 }
 
-/* Phone frame styling when viewed on desktop/laptop */
+
+
+/* =========================================
+   2. GENERAL PAGE
+   ========================================= */
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
+        Roboto, Helvetica, Arial, sans-serif;
+}
+
+.app-body {
+    background-color: var(--page-bg);
+    color: var(--text-main);
+}
+
+.desktop-title {
+    color: var(--primary);
+}
+
+.desktop-subtitle {
+    color: var(--text-muted);
+}
+
+
+/* =========================================
+   3. PHONE FRAME
+   ========================================= */
+
+.phone-frame {
+    background-color: var(--phone-bg);
+    color: var(--text-main);
+}
+
 @media (min-width: 640px) {
     .phone-frame {
         max-width: 412px;
         height: 840px;
         border-radius: 40px;
-        box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.7);
-        border: 12px solid #1e293b;
+        box-shadow: var(--phone-shadow);
+        border: 12px solid var(--frame-border);
     }
 }
 
-/* Custom scrollbar hiding utility */
+
+/* =========================================
+   4. PHONE STATUS BAR
+   ========================================= */
+
+.status-bar {
+    background-color: var(--status-bg);
+    color: var(--text-muted);
+}
+
+.speaker-notch {
+    background-color: var(--notch-bg);
+}
+
+
+/* =========================================
+   5. APP HEADER
+   ========================================= */
+
+.app-header {
+    background-color: var(--header-bg);
+    color: var(--text-on-primary);
+}
+
+.location-badge {
+    background-color: var(--phone-bg);
+    color: var(--primary);
+}
+
+
+/* =========================================
+   6. MAIN CONTENT
+   ========================================= */
+
+.content-area {
+    background-color: var(--content-bg);
+    color: var(--text-main);
+}
+
+
+/* =========================================
+   7. BOTTOM NAVIGATION
+   ========================================= */
+
+.bottom-nav {
+    background-color: var(--bottom-nav-bg);
+    border-color: var(--border-color);
+    color: var(--text-muted);
+}
+
+.nav-item {
+    color: var(--text-muted);
+    transition: color 0.2s ease;
+}
+
+.nav-item:hover {
+    color: var(--text-main);
+}
+
+.nav-active {
+    color: var(--primary);
+}
+
+
+/* =========================================
+   8. SCROLLBAR
+   ========================================= */
+
 .hide-scrollbar::-webkit-scrollbar {
     display: none;
 }
+
 .hide-scrollbar {
     -ms-overflow-style: none;
     scrollbar-width: none;
 }
+
+/* MyRapid KL Header */
+
+.rapid-header {
+    background-color: #dc2626;
+    color: #ffffff;
+}
+
+.rapid-logo {
+    background-color: #ffffff;
+    color: #dc2626;
+}
+
+.rapid-location {
+    background-color: #b91c1c;
+    color: #fee2e2;
+    border-color: #ef4444;
+}
+
