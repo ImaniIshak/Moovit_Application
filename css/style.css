@@ -172,3 +172,99 @@ body {
     border-color: #ef4444;
 }
 
+
+/* Search Page */
+.search-page {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+    background-color: #f8fafc;
+    color: #1e293b;
+}
+
+.search-heading h2 {
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 6px;
+}
+
+.search-heading p {
+    font-size: 14px;
+    color: #64748b;
+}
+
+.search-box {
+    background-color: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 14px;
+    padding: 16px;
+}
+
+.search-field {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 8px 0;
+}
+
+.search-field i {
+    color: #dc2626;
+}
+
+.search-field input {
+    width: 100%;
+    border: none;
+    outline: none;
+    background: transparent;
+    color: #1e293b;
+    font-size: 14px;
+}
+
+.search-box hr {
+    border: none;
+    border-top: 1px solid #e2e8f0;
+    margin: 10px 0;
+}
+
+.search-button {
+    background-color: #dc2626;
+    color: #ffffff;
+    border: none;
+    border-radius: 12px;
+    padding: 13px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.search-button:hover {
+    background-color: #b91c1c;
+}
+
+.popular-destinations h3 {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 12px;
+}
+
+.destination-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.destination-list button {
+    background-color: #ffffff;
+    color: #334155;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    padding: 9px 14px;
+    cursor: pointer;
+}
+
+.destination-list button:hover {
+    border-color: #dc2626;
+    color: #dc2626;
+}
+
